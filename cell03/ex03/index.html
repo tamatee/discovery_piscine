@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .todo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            row-gap: 0.5rem;
+        }
+        .todo > * {
+            width: 25rem;
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            text-align: left;
+            background-color: #F4F4F4;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .todo > *:hover {
+            background-color: #EEE;
+            cursor: pointer;
+            color: #222;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type=submit] {
+            margin-top: 1rem;
+            padding: 0.5rem 2rem;
+            color: #444;
+            background: transparent;
+            font-size: 1.5rem;
+        }
+        input[type=submit]:hover {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Todo List</h1>
+        <form action="#" id="todo_form">
+            <div class="todo" id="ft_list">
+            </div>
+            <input id="new_list" type="submit" value="New"></button>
+        </form>
+    </div>
+</body>
+</html>
+<script src="todo.js"></script>

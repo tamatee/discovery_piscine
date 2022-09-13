@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style>
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+}
+.container {
+    border-radius: 1rem;
+    border: 3px solid #AAA;
+    padding: 1.5rem 4rem;
+}
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+input, select {
+    font-size: 2rem;
+    font-family: monospace;
+    border: none;
+    outline: none;
+    color: #444;
+}
+input[type=text] {
+    border-bottom: 2px solid #BBB;
+    width: 10rem;
+    text-align: center;
+}
+input[type=text]:focus {
+    border-bottom: 2px solid #444;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    border-bottom: 2px solid #FFF;
+}
+select:hover {
+    border-bottom: 2px solid #888;
+    cursor: pointer;
+}
+select::-ms-expand {
+    display: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button {
+    width: 100%;
+}
+input[type=submit] {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    border: 3px solid #999;
+    color: #666;
+    font-weight: bold;
+    font-family: san-serif;
+    border-radius: 1rem;
+}
+    </style>
+</head>
+<body style="width: 100%;">
+    <center>
+        <div class="container">
+            <h1>Calculator</h1>
+            <form id="calculator_form" action="#" autocomplete="off">
+                <div class="form">
+                    <input id="n_left" type="text" placeholder="Number">
+                    <select id="operator" tabindex="-1">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                    <input id="n_right" type="text" placeholder="Number">
+                </div>
+                <div class="button">
+                    <input type="submit" value="Try Me!"></input>
+                </div>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
+<script>
+let n_left_input = document.getElementById("n_left");
+let n_right_input = document.getElementById("n_right");
+let operator_input = document.getElementById("operator");
+let form = document.getElementById("calculator_form");
+
+setInterval(() => {
+	alert("Please, use me...");
+}, 30000);
+
+form.onsubmit = () => {
+	let n_left = parseFloat(n_left_input.value);
+	let n_right = parseFloat(n_right_input.value);
+	let operator = operator_input.value;
+
+	let is_error_left = isNaN(n_left) || n_left < 0;
+	let is_error_right = isNaN(n_right) || n_right < 0;
+	if (is_error_left || is_error_right) {
+		console.log("Error :(");
+        alert("Error :(");
+		return;
+	}
+	if ((operator == "/" || operator == "%") && n_right === 0) {
+		console.log("It's over 9000!");
+        alert("It's over 9000!");
+		return;
+	}
+
+	let result = 0;
+	if (operator === "+") {
+		result = n_left + n_right;
+	} else if (operator === "-") {
+		result = n_left - n_right;
+	} else if (operator === "*") {
+		result = n_left * n_right;
+	} else if (operator === "/") {
+		result = n_left / n_right;
+	} else if (operator === "%") {
+		result = n_left % n_right;
+	}
+    console.log(result);
+	alert(result);
+};
+</script>

@@ -1,0 +1,11 @@
+#bg {
+    background-color: white;
+}
+
+#button {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 250px;
+    height: 50px;
+}

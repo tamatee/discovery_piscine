@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tham</title>
+    <style>
+      html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section {
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg1{
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    background: url("image_2.jpg")   50% 50% no-repeat;
+    position: 50% 50%;
+    background-size:cover;
+    transform: translateZ(-600px) scale(1);
+    z-index: -1;
+  }
+  .bg2{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("https://media4.giphy.com/media/Ju7l5y9osyymQ/giphy.gif?cid=ecf05e47szfsbcckyv6q7u1k5wa91mz5l1vjc44cho186xju&rid=giphy.gif&ct=g");
+    background-size: 50% 50%;
+    justify-content:center;
+    transform: translateZ(-100px) scale(1);
+    z-index: -1;
+  }
+.ta{
+  font-size: 5rem;
+    color: white;
+    border-collapse: collapse;
+    height:auto;
+    width: auto;
+    margin-bottom: 600px;
+}
+.tb{
+  font-size: 5rem;
+    color: white;
+    border-collapse: collapse;
+    height:auto;
+    width: auto;
+    margin-bottom: 500px;
+}
+.con{
+  font-size:xx-large;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 300px;
+  padding-bottom: 81px;
+  padding-top: 81px;
+}
+.setb{
+  height: 190px;
+  width: 300px;
+  justify-content: center;
+  background-color: white;
+}
+td{
+    text-align: center;
+}
+/*aaaaaaaaaaaaaaaaaaasaaaaaaaaaaaaaaaa */
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  background-color: rgb(231, 231, 231);
+  border-radius: 20px;
+  text-align: right;
+}
+.c, .java, .html, .js, .bash {
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  border-radius: 20px;
+}
+.c {
+  width: 68%;
+  text-align: right;
+  background-color: #004d9f;
+}
+.java {
+  width: 53%;
+  text-align: right;
+  background-color: #ff0000;
+}
+.html {
+  width: 80%;
+  text-align: right;
+  background-color: #ff6600;
+}
+.js {
+  width: 42%;
+  text-align: right;
+  background-color: #ffae00;
+}
+.bash {
+  width: 55%;
+  text-align: right;
+  background-color: #808080;
+}
+.m{
+  text-align: right;
+  border: 1px solid black;
+  text-align: left;
+}
+.midL{
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 50%;
+}
+.s2{
+  transform: translateZ(-100px) scale(1);
+    z-index: -1;
+}
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="border-b border-gray-100 fixed top+1 w-full">
+      <div
+        class="flex items-center justify-left h-16 mx-auto w-full sm:px-6 lg:px-8 bg-white"
+      >
+      <a
+              href=""
+              class="block h-16 leading-[4rem]"
+            >
+              😵
+            </a>
+        <div class="flex items-center justify-center flex-1">
+          <nav
+            class="hidden lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex"
+          >
+            <a
+              href="#s1"
+              class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-black-700 hover:border-current"
+            >
+              Profile
+            </a>
+    
+            <a
+              href="#s2"
+              class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-black-700 hover:border-current"
+            >
+              Skill
+            </a>
+    
+            <a
+              href="#s3"
+              class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-black-700 hover:border-current"
+            >
+              Contact
+            </a>
+          </nav>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+      
+        <section class="bg1" id="s1">
+            <center>
+                <h1 class="tb">Tham</h1>
+            </center>
+        </section>
+        <section style="background-color: Black" id="s2" class="s2">
+            <h1 class="midL">Programming Proficiency</h1>
+            <table class="midL" class="ta">
+                <tr>
+                    <td class="m">
+                        <pre>
+                        <h3>C <div class="container"><div class="c">68%</div></div></h3>
+                        <h3>Java <div class="container"><div class="java">53%</div></div></h3>
+                        <h3>HTML <div class="container"><div class="html">80%</div></div></h3>
+                        <h3>Java Script <div class="container"><div class="js">42%</div></div></h3>
+                        <h3>Bash Script <div class="container"><div class="bash">55%</div></div></h3>
+                        </pre>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section class="bg2" id="s3">
+            <h1 class="con">Contact</h1>
+            <table class="setb" class=".ta">
+            <tr>
+                <th>
+                    <a href="https://web.facebook.com/tham.teeramate/"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" style="width: 50px;"></a>
+                    <th style="text-align: left;">
+                        <p>Teeramate Charoenkitisap</p>
+                    </th>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a href="https://www.instagram.com/time_teera/"><img src="https://img.icons8.com/ios7/12x/instagram-new--v2.png" style="width: 50px;"></a>
+                    <th style="text-align:left">
+                        <p>time_teera</p>
+                    </th>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a href="https://github.com/tamatee"><img src="https://cdn-icons-png.flaticon.com/512/2175/2175377.png" style="width: 50px;">
+                    <th style="text-align:left">
+                        <p>tamatee</p>
+                    </th>
+                </a>
+                </th>
+            </tr>
+          </table>
+        </section>
+</body>
+</html>
