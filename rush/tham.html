@@ -341,24 +341,3 @@
 </body>
 
 </html>
-<script>
-  let navmenu2 = document.querySelector(".navmenu2")
-  let hamburger = document.querySelector(".hamburger")
-  let navmenuli = document.querySelectorAll(".navmenu2 li")
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navmenu2.classList.toggle("active");
-  })
-  navmenuli.forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navmenu2.classList.remove("active");
-  }))
-const button = document.querySelector("#button");
-const icon = document.querySelector("#button > i");
-const audio = document.querySelector("audio");
-window.addEventListener('', event => {
-  const audio = document.querySelector("audio");
-  audio.volume = 0.2;
-  audio.play();
-});
-</script>
