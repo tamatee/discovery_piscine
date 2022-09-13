@@ -29,9 +29,9 @@ body {
   .bg1{
     height: 100%;
     width: 100%;
-    padding: 0%;
+    padding-top: 4%;
     margin: 0%;
-    background: url("image_2.jpg")   50% 50% no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("image_2.jpg")   50% 50% no-repeat;
     position: 50% 50%;
     background-size:cover;
     transform: translateZ(-600px) scale(1);
@@ -55,11 +55,11 @@ body {
 }
 .tb{
   font-size: 5rem;
-    color: white;
+    color: rgb(255, 255, 255);
     border-collapse: collapse;
     height:auto;
     width: auto;
-    margin-bottom: 500px;
+    margin-bottom: 550px;
 }
 .con{
   font-size:xx-large;
@@ -91,6 +91,7 @@ td{
 }
 .c, .java, .html, .js, .bash {
   text-align: center;
+  padding-right: 30px;
   font-weight: bolder;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -100,7 +101,7 @@ td{
 .c {
   width: 68%;
   text-align: right;
-  background-color: #004d9f;
+  background-color: #006aff;
 }
 .java {
   width: 53%;
@@ -133,64 +134,117 @@ td{
   color: white;
   width: 50%;
 }
+.midLa{
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 72px;
+}
 .s2{
   transform: translateZ(-100px) scale(1);
     z-index: -1;
 }
+.nav h2{
+  font-size: 6rem;
+}
+.navmenu{
+    position: fixed;
+    top: 0;
+    height:4rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.navmenu h2{
+    color: rgbrgba(40, 40, 40, 0.665);
+    margin-left: 2rem;
+    margin-top: 10px;
+    width: 15em;
+    position: absolute;
+    left: 2vw;
+}
+.navmenu ul, .hamburger{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    gap: 4vw;
+    padding: 1vh;
+    position: absolute;
+    right: 20vw;
+    color: rgb(74, 136, 136);
+
+}
+.navmenu li, .navmenu2 li {
+    height: 6vh;
+}
+.navmenu a, .navmenu2 a, .author a{
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(40, 40, 40, 0.665);
+}
+
+.navmenu li:hover{
+    border-bottom: 3px solid rgba(40, 40, 40, 0.665);
+    margin-top: -3px;
+    transition: 0.5s;
+}
+
+.navmenu span{
+    border-radius: 50%;
+    margin: 0.5vh;
+}
+
+.navmenu2{
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    position: fixed;
+    width:100%;
+    color: #fff;
+    left: -100%;
+    top:8vh;
+    display: block;
+    z-index: 3;
+    transition: 0.2s ease-in;
+}
+
+
+.navmenu2 li{
+    height: 5vh;
+    cursor: pointer;
+    margin: auto 0;
+    list-style: none;
+}
+.navmenu2 li:hover{
+    color: #fff;
+    background-color: rgba(40, 40, 40, 0.665);
+    border-radius: 2vh;
+}
+
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="border-b border-gray-100 fixed top+1 w-full">
-      <div
-        class="flex items-center justify-left h-16 mx-auto w-full sm:px-6 lg:px-8 bg-white"
-      >
-      <a
-              href=""
-              class="block h-16 leading-[4rem]"
-            >
-              😵
-            </a>
-        <div class="flex items-center justify-center flex-1">
-          <nav
-            class="hidden lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex"
-          >
-            <a
-              href="#s1"
-              class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-black-700 hover:border-current"
-            >
-              Profile
-            </a>
-    
-            <a
-              href="#s2"
-              class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-black-700 hover:border-current"
-            >
-              Skill
-            </a>
-    
-            <a
-              href="#s3"
-              class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-black-700 hover:border-current"
-            >
-              Contact
-            </a>
-          </nav>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-      
+  <div class="navmenu" class="nav">
+    <h2>wrapUp();</h2>
+    <ul>
+        <a href="#s1"><li>Profile</li></a>
+        <a href="#s2"><li>Skill</li></a>
+        <a href="#s3"><li>Contact</li></a>
+
+    </ul>
+</div>
         <section class="bg1" id="s1">
             <center>
                 <h1 class="tb">Tham</h1>
             </center>
         </section>
         <section style="background-color: Black" id="s2" class="s2">
-            <h1 class="midL">Programming Proficiency</h1>
+            <h1 class="midLa">Programming Proficiency</h1>
             <table class="midL" class="ta">
                 <tr>
                     <td class="m">
@@ -237,3 +291,16 @@ td{
         </section>
 </body>
 </html>
+<script>
+  let navmenu2 = document.querySelector(".navmenu2")
+        let hamburger = document.querySelector(".hamburger")
+        let navmenuli = document.querySelectorAll(".navmenu2 li")
+        hamburger.addEventListener("click", ()=> {
+        hamburger.classList.toggle("active");
+        navmenu2.classList.toggle("active");
+    })
+        navmenuli.forEach(n => n.addEventListener("click", () =>{
+        hamburger.classList.remove("active");
+        navmenu2.classList.remove("active");
+    }))
+</script>
