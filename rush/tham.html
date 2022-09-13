@@ -70,9 +70,8 @@
       font-size: 5rem;
       color: rgb(255, 255, 255);
       border-collapse: collapse;
-      margin-bottom: 90%;
-      transform: translateZ(-600px) scale(1);
-      z-index: +1;
+      margin-bottom: 80vh;
+      justify-content: center;
     }
 
     .con {
@@ -153,14 +152,13 @@
     }
 
     .m {
-      text-align: right;
-      border: 1px solid black;
+      
       text-align: left;
     }
 
     .midL {
       text-align: center;
-      background-color: black;
+      background-color: none;
       color: white;
       width: 50%;
     }
@@ -168,6 +166,8 @@
     .s2 {
       transform: translateZ(-100px) scale(1);
       z-index: -1;
+      width: 100%;
+      height: 100vh;
     }
 
     .nav h2 {
@@ -234,7 +234,7 @@
       margin: 0.5vh;
     }
 
-    .table {
+    .table{
       width: 100%;
       height: 100vh;
     }
@@ -270,7 +270,7 @@
 </head>
 
 <body>
-  <audio src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></audio>
+  <audio src="Never gonna give you up.mp3"></audio>
   <div class="navmenu" class="nav">
     <h2>wrapUp();</h2>
     <ul>
@@ -287,9 +287,7 @@
     </ul>
   </div>
   <section class="bg1" id="s1">
-    <center>
       <div class="tb">Tham</div>
-    </center>
   </section>
   <section style="background-color: Black" id="s2" class="s2">
     <h1>Programming Proficiency</h1>
@@ -363,19 +361,4 @@ window.addEventListener('', event => {
   audio.volume = 0.2;
   audio.play();
 });
-button.addEventListener("DOMContentLoaded", () => {
-  if (audio.paused) {
-    audio.volume = 0.2;
-    audio.play();
-    icon.classList.remove('fa-volume-up');
-    icon.classList.add('fa-volume-mute');
-    
-  } else {
-    audio.pause();
-    icon.classList.remove('fa-volume-mute');
-    icon.classList.add('fa-volume-up');
-  }
-  button.classList.add("fade");
-});
-
 </script>
